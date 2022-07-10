@@ -45,7 +45,7 @@ M.keys = {
     {key="DownArrow", mods="SHIFT", action=act.ScrollByLine(3)},
 
     {key="-", mods="LEADER", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
-	{key="\\", mods="LEADER", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
+    {key="\\", mods="LEADER", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
     {key="x", mods="LEADER", action=wezterm.action{CloseCurrentPane={confirm=true}}},
     {key="h", mods="LEADER", action=wezterm.action{ActivatePaneDirection="Left"}},
     {key="j", mods="LEADER", action=wezterm.action{ActivatePaneDirection="Up"}},
