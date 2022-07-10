@@ -1,0 +1,86 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "#88c0d0",
+          "style": "plain",
+          "template": "<#5e81ac>\u250f[</>{{ .UserName }}<#5e81ac>]</>",
+          "type": "session"
+        },
+        {
+          "foreground": "#b48ead",
+          "properties": {
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          },
+          "style": "plain",
+          "template": "<#5e81ac>--[</>{{ .HEAD }}{{ .BranchStatus }}{{ if .Working.Changed }}<#8fbcbb> \u25cf </>{{ end }}{{ if .Staging.Changed }}<#88c0d0> \u25cf </>{{ end }}<#5e81ac>]</>",
+          "type": "git"
+        },
+        {
+          "foreground": "#b48ead",
+          "style": "plain",
+          "template": "<#5e81ac>--[</>{{.Profile}}{{if .Region}}@{{.Region}}{{end}}<#5e81ac>]</>",
+          "type": "aws"
+        },
+         {
+          "foreground": "#b48ead",
+          "properties": {
+            "time_format": "Monday, 15:04 | \uf5ef 01-02"
+          },
+          "style": "plain",
+          "template": "<#5e81ac>--[</>{{ .CurrentDate | date .Format }}<#5e81ac>]</>",
+          "type": "time"
+        },
+        {
+          "foreground": "#d8dee9",
+          "style": "plain",
+          "template": "<#5e81ac>[</>\uf0e7<#5e81ac>]</>",
+          "type": "root"
+        },
+        {
+          "foreground": "#d8dee9",
+          "style": "plain",
+          "template": "<#5e81ac>[x</>{{ .Meaning }}<#5e81ac>]</>",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#88c0d0",
+          "properties": {
+            "style": "full"
+          },
+          "style": "plain",
+          "template": "<#5e81ac>\u2517[</>{{ .Path }}<#5e81ac>]</>",
+          "type": "path"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#9af",
+          "style": "plain",
+          "template": "$",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
